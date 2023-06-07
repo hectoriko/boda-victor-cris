@@ -33,7 +33,7 @@
 
   <div class="avion-wrapper">
     <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_bdclkupb.json" background="transparent" speed="1"
-      style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+      style="width: 280px; height: 280px;" loop autoplay></lottie-player>
   </div>
 
   <div class="avion-wrapper2">
@@ -41,22 +41,14 @@
       style="width: 125px; height: 125px;" loop autoplay></lottie-player>
   </div>
 
-  <!--
-    <div class="furgo-wrapper">
-      <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_TOdpiB.json"  background="transparent"  speed="1"  style="width: 250px; height: 250px;"  loop autoplay></lottie-player>
-    </div>
-
-    <div class="coche-wrapper">
-      <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_LGgt0q.json"  background="transparent"  speed="1"  loop autoplay></lottie-player>
-    </div>
-  -->
 
   <!-- <div class="screen"> -->
     <div class="slide" id="uno">
       <section class="box boarding-pass">
         <!-- <header> -->
         <header class="logo flex">
-          <img src="https://i2cmsmediaprod.blob.core.windows.net/media/3302/iberia_express_logo.png" alt="">
+          <!-- <img src="https://i2cmsmediaprod.blob.core.windows.net/media/3302/iberia_express_logo.png" alt=""> -->
+          <img src="./img/logo.png" alt="">
     
           <div class="fecha-wrapper">
             <p class="title">Fecha</p>
@@ -67,22 +59,11 @@
             <p class="title">Hora</p>
             <p class="text">Viernes 15
               <br>
-              a partir de la 16 h
+              desde las 16 h
             </p>
           </div>
         </header>
-        <!-- </header> -->
-    
-        <!-- <main> -->
-    
-    
-        <!--
-          <div class="nombre-wrapper">
-            <p class="">Victor & Cristina</p>
-          </div>
-         -->
-    
-    
+
         <div class="origen-destino flex">
           <p>HOME</p>
           <img src="./img/plane.png" alt="Icono avion">
@@ -90,36 +71,81 @@
         </div>
 
 
-    
+
+        <!-- <div class="flex">
+          <div class="">
+            <p class="title">Dónde</p>
+            <p class="text">Navacepedilla, Ávila</p>
+          </div>
+
+          <div class="">
+            <p class="title">Lugar</p>
+            <p class="text">Ribera del Corneja</p>
+          </div>
+        </div> -->
+
+        <div class="flex">
+          <div class="">
+            <p class="title">Puerta</p>
+            <p class="text">-</p>
+          </div>
+
+          <div class="">
+            <p class="title">Embarque</p>
+            <p class="text">N/A</p>
+          </div>
+
+          <div class="">
+            <p class="title">Asiento</p>
+            <p class="text">A confirmar</p>
+          </div>
+        </div>
+
+
         <div class="flex">
           <div class="nombre-wrapper">
             <p class="title">Pasajeros</p>
             <p class="text">Victor & Cristina</p>
           </div>
-    
-          <div class="iban-wrapper">
-            <p class="title">IBAN</p>
-            <p class="text">ES8600817115170001947796</p>
+
+          <div class="iban-wrapper tooltip" onclick="copyIban()" onmouseout="outFunc()">
+            <span class="tooltiptext" id="myTooltip">Copiar</span>
+
+            <p class="title iban-title">IBAN
+              <span class="iban-icon">
+                <img src="./img/copy.svg" alt="">
+              </span>
+            </p>
+            <p class="text iban-text" id="iban">ES8600817115170001947796</p>
           </div>
         </div>
 
-        <div class="extra-space"></div>
+        <!--
+        <div class="flex">
+          <div class="iban-wrapper">
+            <p class="title iban-title">IBAN</p>
+            <p class="text iban-text">ES8600817115170001947796</p>
+          </div>
+        </div>
+        -->
 
         <div class="more-address">
-          <p class="title">Navacepedilla, Avila</p>
-          <p class="text">Ribera del Corneja</p>
-        </div>
-        <!-- </main> -->
-    
-        <!-- <footer> -->
-          <div class="ir">
-            <a href="https://maps.app.goo.gl/PirYLXVLmWA5DoZc9">
-              <img src="./img/location.svg" alt="">
-              <p>LLévame</p>
-            </a>
+          <a class="qr-wrapper" href="https://maps.app.goo.gl/PirYLXVLmWA5DoZc9">
+            <img src="./img/QR.png" alt="" id="qr">
+          </a>
+
+          <div>
+            <p class="title">Navacepedilla, Avila</p>
+            <p class="text">Ribera del Corneja</p>
           </div>
-    
-    
+
+          <a class="boton-ir" href="https://maps.app.goo.gl/PirYLXVLmWA5DoZc9">
+            <img src="./img/location.svg" alt="">
+            <p>LLévame</p>
+          </a>
+        </div>
+
+
       </section>
     </div>
 
@@ -177,18 +203,24 @@
       </div>
     </div>
 
-    <div class="slide" id="tres">
+    <div class="slide asistencia" id="tres">
       <div class="box">
-        <p class="asistencia">Por favor, confirma tu asistencia.</p>
+        <p class="">Por favor, confirma tu asistencia.</p>
         <form action="">
           <input type="text" name="Invitado" placeholder="Tu nombre">
+          <input type="text" name="Acompañante" placeholder="Acompañante">
 
-          <div class="ir">
-            <a href="https://maps.app.goo.gl/PirYLXVLmWA5DoZc9">
-              <img src="./img/plane.png" alt="">
-              <p>Check in</p>
-            </a>
-          </div>
+            <label for="">¿Que noches te quedas?</label>
+
+            <input type="checkbox" id="viernes" value="first_checkbox" value="Viernes"> Viernes
+            <input type="checkbox" id="sabado" value="second_checkbox" value="Sábado"> Sábado
+
+
+
+          <a class="boton-checkin" href="https://maps.app.goo.gl/PirYLXVLmWA5DoZc9">
+            <img src="./img/plane.png" alt="">
+            <p>Check in</p>
+          </a>
 
         </form>
       </div>
@@ -199,7 +231,7 @@
 
 </html>
 
-<!--
+<!--nav
 
 Info que queremos que aparezca:
 
