@@ -47,37 +47,37 @@ function outFunc() {
 }
 
 // Send mail
-const checkin = document.querySelector(".boton-checkin");
-checkin.addEventListener("click", e => {
-  e.preventDefault();
-  e.stopPropagation();
+// const checkin = document.querySelector(".boton-checkin");
+// checkin.addEventListener("click", e => {
+//   e.preventDefault();
+//   e.stopPropagation();
 
-  const invitado = document.querySelector("#invitado").value;
-  const acompanante = document.querySelector("#acompanante").value;
+//   const invitado = document.querySelector("#invitado").value;
+//   const acompanante = document.querySelector("#acompanante").value;
 
-  const viernes = document.querySelector("#viernes").checked;
-  const sabado = document.querySelector("#sabado").checked;
+//   const viernes = document.querySelector("#viernes").checked;
+//   const sabado = document.querySelector("#sabado").checked;
 
-  const target = "Noacrisvic@gmail.com";
-  // const subject = 'Confirmación de asistencia';
-  const subject = `Invitado: ${invitado} ${
-    acompanante ? ` - Acompañante: ${acompanante}` : ""
-  } --- Días:${viernes ? "V" : ""} ${sabado ? " S" : ""} `;
+//   const target = "Noacrisvic@gmail.com";
+//   // const subject = 'Confirmación de asistencia';
+//   const subject = `Invitado: ${invitado} ${
+//     acompanante ? ` - Acompañante: ${acompanante}` : ""
+//   } --- Días:${viernes ? "V" : ""} ${sabado ? " S" : ""} `;
 
-  let body = `Hola, soy ${invitado} y asistiré ${viernes ? "el viernes" : ""} ${
-    sabado ? "el sábado" : ""
-  } ${acompanante ? "acompañado de " + acompanante : ""}.`;
+//   let body = `Hola, soy ${invitado} y asistiré ${viernes ? "el viernes" : ""} ${
+//     sabado ? "el sábado" : ""
+//   } ${acompanante ? "acompañado de " + acompanante : ""}.`;
 
-  body += `\n`;
-  body += `Por favor, no cambies el asunto del correo.`;
-  body += `Si quieres añadir algo, hazlo debajo.`;
-  body += `\n`;
-  body += `Gracias! 😀`;
+//   body += `\n`;
+//   body += `Por favor, no cambies el asunto del correo.`;
+//   body += `Si quieres añadir algo, hazlo debajo.`;
+//   body += `\n`;
+//   body += `Gracias! 😀`;
 
-  window.location.href = `mailto:${target}?subject=${subject}&body=${body}`;
+//   window.location.href = `mailto:${target}?subject=${subject}&body=${body}`;
 
-  document.querySelector(".thanks").classList.add("show");
-});
+//   document.querySelector(".thanks").classList.add("show");
+// });
 
 // Highlight NAVIGATION
 var boxes = document.querySelectorAll(".box");
