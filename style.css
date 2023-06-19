@@ -22,7 +22,7 @@ body {
   background-color: #fafafa;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.3px;
-  font-size: 14.5px;
+  font-size: 13px;
   position: relative;
   overflow-x: hidden;
 }
@@ -38,13 +38,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 25px 20px 25px 30px;
 }
 
 .flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 }
 
 /* Animaciones */
@@ -52,7 +53,7 @@ body {
   position: absolute;
   position: fixed;
   width: 100%;
-  top: -20%;
+  top: -11%;
   left: 0;
   right: 0;
   z-index: -1;
@@ -62,39 +63,46 @@ body {
 .avion-wrapper {
   position: absolute;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: -30px;
+  left: -20px;
+  width: 150px !important;
+  height: 150px !important;
 }
 
 .avion-wrapper2 {
   position: absolute;
   position: fixed;
-  top: 84%;
-  right: 5%;
+  bottom: 20px;
+  right: 20px;
+  width: 100px !important;
+  height: 100px !important;
 
   filter: hue-rotate(-183deg);
   transform: scaleX(-1);
-  filter: blur(1.5px);
+  filter: blur(0.2px);
 }
 /* Animaciones */
-
 
 /* NAV */
 nav {
   position: fixed;
-  left: 10px;
+  left: 5px;
   top: 50%;
   transform: translateY(-50%);
 }
 
+nav ul {
+  list-style: none;
+}
+
 nav li a {
   display: block;
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   border: 1px solid #a4a4a4;
   background-color: white;
-  margin: 10px;
+  margin: 6px 0;
 }
 
 nav li a.active {
@@ -103,30 +111,35 @@ nav li a.active {
 }
 /* NAV */
 
-
-
 .box {
   border: 2px solid #e8e8e8;
   background-color: #f3f3f3;
-  padding: 36px 26px;
+  padding: 25px 20px;
   border-radius: 7px;
-  /* max-width: 530px; */
-  width: 480px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 17px;
 
   box-shadow: 0px 0px 38.6px rgba(0, 0, 0, 0.04),
     0px 0px 308px rgba(0, 0, 0, 0.08);
+
+  position: relative;
+  z-index: 10;
 }
 
 .boarding-pass {
-  gap: 40px;
+  gap: 30px;
+}
+
+.logo.flex {
+  /* flex-wrap: wrap; */
+  gap: 10px;
 }
 
 .logo img {
-  width: 96px;
-  height: 32px;
+  max-width: 70px;
+  /* flex-basis: 100%; */
 }
 
 .fecha-wrapper {
@@ -136,7 +149,7 @@ nav li a.active {
 .fecha-wrapper,
 .hora-wrapper {
   max-width: 130px;
-  font-size: 0.9rem;
+  /* font-size: 0.9rem; */
   text-align: right;
 }
 
@@ -176,28 +189,24 @@ nav li a.active {
 }
 
 .origen-destino p {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: #777777;
   letter-spacing: 0;
 }
 
 .origen-destino img {
-  width: 45px;
+  width: 35px;
   transform: rotate(45deg);
-  filter: brightness(-7.5);
 }
 
 .more-info {
   max-width: 530px;
-}
-
-.more-info {
-  gap: 28px;
+  gap: 14px;
 }
 
 .bloque {
   border-bottom: 2px solid #e8e8e8;
-  padding-bottom: 25px;
+  padding-bottom: 12px;
 }
 
 .bloque:last-child {
@@ -227,6 +236,14 @@ nav li a.active {
   /* margin-left: 1em; */
 }
 
+.bloque ul li.principal {
+  margin: 10px 0;
+}
+
+.bloque ul li.principal li {
+  list-style-type: circle;
+}
+
 .bold {
   font-weight: 800;
   /* color: #737373; */
@@ -235,35 +252,6 @@ nav li a.active {
 .bloque p.warn {
   text-align: center;
   color: var(--accent-color);
-}
-
-.asistencia {
-  margin-bottom: 9px;
-  color: #777777;
-  font-weight: 600;
-  text-align: center;
-}
-
-form input[type="text"] {
-  appearance: none;
-  border: 1px solid #cecece;
-  border-radius: 3px;
-  /* border-bottom: 1px solid #777777; */
-  margin-bottom: 20px;
-  padding: 10px 6px;
-  width: 100%;
-  font-size: 16px;
-  background-color: transparent !important;
-}
-
-form input[type="text"]:focus {
-  outline: none;
-}
-
-label{
-  margin-top: 20px;
-  margin-bottom: 20px;
-  display: block;
 }
 
 .more-address {
@@ -281,7 +269,62 @@ label{
   width: 100%;
 }
 
+.asistencia {
+  /* margin-bottom: 9px; */
+  color: #777777;
+  font-weight: 600;
+  text-align: center;
+}
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+form h2 {
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+form input[type="text"] {
+  appearance: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  /* border-bottom: 1px solid #777777; */
+  margin-bottom: 20px;
+  padding: 10px 6px;
+  width: 100%;
+  font-size: 16px;
+  background-color: white;
+}
+
+form input[type="text"]:focus {
+  outline: none;
+}
+
+form input[type="checkbox"] {
+  width: 20px;
+}
+
+label {
+  margin-left: 10px;
+  /* margin-bottom: 20px; */
+  display: block;
+  color: #8e8e8e;
+}
+
+.both-checks {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.check-wrapper {
+  display: flex;
+  cursor: pointer;
+}
 
 .boton-ir,
 .boton-checkin,
@@ -322,17 +365,25 @@ label{
 .boton-ir:hover img,
 .boton-checkin:hover img {
   fill: white;
-  filter: brightness(5);
+  filter: brightness(15);
 }
 
 .boton-ir img,
 .boton-checkin img {
   transition: all 0.3s ease-in-out;
+}
+.boton-ir img {
   width: 18px;
 }
 
+.boton-checkin img {
+  width: 18px;
+  transform: rotate(45deg);
+}
 
-
+.boton-checkin p {
+  margin-left: 6px;
+}
 
 .tooltip {
   position: relative;
@@ -371,4 +422,101 @@ label{
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+
+.thanks {
+  background-color: rgb(193, 229, 183);
+  color: rgb(5, 100, 5);
+  display: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.thanks.show {
+  display: block;
+}
+
+@media (min-width: 568px) {
+  body {
+    font-size: 14px;
+  }
+
+  .flex {
+    gap: 30px;
+  }
+
+  .clouds-wrapper {
+    top: -20%;
+  }
+
+  .avion-wrapper {
+    top: 0;
+    left: 0;
+    width: 280px !important;
+    height: 280px !important;
+  }
+
+  .avion-wrapper2 {
+    /* position: relative; */
+    /* z-index: -1; */
+    width: 130px !important;
+    height: 130px !important;
+  }
+
+  .avion-wrapper image,
+  .avion-wrapper2 image {
+    width: 100%;
+  }
+
+  nav {
+    left: 20px;
+  }
+
+  nav li a {
+    width: 18px;
+    height: 18px;
+    margin: 10px 0;
+  }
+
+  .box {
+    gap: 25px;
+    padding: 36px 26px;
+    width: 90%;
+    max-width: 480px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .boarding-pass {
+    gap: 40px;
+  }
+
+  .logo.flex {
+    /* flex-wrap: nowrap; */
+    gap: 30px;
+  }
+
+  .logo img {
+    width: 96px;
+    height: 32px;
+    /* flex-basis: unset; */
+  }
+
+  .origen-destino p {
+    font-size: 2.5rem;
+  }
+
+  .origen-destino img {
+    width: 45px;
+  }
+
+  .bloque {
+    padding-bottom: 24px;
+  }
+
+  .more-info {
+    gap: 28px;
+  }
 }

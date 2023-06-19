@@ -5,10 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Victor&Cristina</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 
@@ -19,60 +25,44 @@
 <body>
 
   <nav>
-    <ul class="nav">
-      <li><a href="#uno" class="active"></a></li>
-      <li><a href="#dos"></a></li>
-      <li><a href="#tres"></a></li>
+    <ul class="">
+      <li><a href="#uno" data-ref="uno" class="active"></a></li>
+      <li><a href="#dosA" data-ref="dosA"></a></li>
+      <li><a href="#dosB" data-ref="dosB"></a></li>
+      <li><a href="#tres" data-ref="tres"></a></li>
     </ul>
   </nav>
 
-  <div class="clouds-wrapper">
-    <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_yc2d0lo5.json" background="transparent" speed="1"
-      loop autoplay></lottie-player>
-  </div>
+  <div class="slide" id="uno">
+    <section class="box boarding-pass">
+      <!-- <header> -->
+      <header class="logo flex">
+        <!-- <img src="https://i2cmsmediaprod.blob.core.windows.net/media/3302/iberia_express_logo.png" alt=""> -->
+        <img src="./img/logo.png" alt="">
 
-  <div class="avion-wrapper">
-    <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_bdclkupb.json" background="transparent" speed="1"
-      style="width: 280px; height: 280px;" loop autoplay></lottie-player>
-  </div>
-
-  <div class="avion-wrapper2">
-    <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_bdclkupb.json" background="transparent" speed="1"
-      style="width: 125px; height: 125px;" loop autoplay></lottie-player>
-  </div>
-
-
-  <!-- <div class="screen"> -->
-    <div class="slide" id="uno">
-      <section class="box boarding-pass">
-        <!-- <header> -->
-        <header class="logo flex">
-          <!-- <img src="https://i2cmsmediaprod.blob.core.windows.net/media/3302/iberia_express_logo.png" alt=""> -->
-          <img src="./img/logo.png" alt="">
-    
-          <div class="fecha-wrapper">
-            <p class="title">Fecha</p>
-            <p class="text">15, 16, 17 de septiembre</p>
-          </div>
-    
-          <div class="hora-wrapper">
-            <p class="title">Hora</p>
-            <p class="text">Viernes 15
-              <br>
-              desde las 16 h
-            </p>
-          </div>
-        </header>
-
-        <div class="origen-destino flex">
-          <p>HOME</p>
-          <img src="./img/plane.png" alt="Icono avion">
-          <p>ÁVILA</p>
+        <div class="fecha-wrapper">
+          <p class="title">Fecha</p>
+          <p class="text">15, 16, 17 de septiembre</p>
         </div>
 
+        <div class="hora-wrapper">
+          <p class="title">Hora</p>
+          <p class="text">Viernes 15
+            <br>
+            desde las 16 h
+          </p>
+        </div>
+      </header>
+
+      <div class="origen-destino flex">
+        <p>HOME</p>
+        <img src="./img/plane.png" alt="Icono avion">
+        <p>ÁVILA</p>
+      </div>
 
 
-        <!-- <div class="flex">
+
+      <!-- <div class="flex">
           <div class="">
             <p class="title">Dónde</p>
             <p class="text">Navacepedilla, Ávila</p>
@@ -84,43 +74,43 @@
           </div>
         </div> -->
 
-        <div class="flex">
-          <div class="">
-            <p class="title">Puerta</p>
-            <p class="text">-</p>
-          </div>
-
-          <div class="">
-            <p class="title">Embarque</p>
-            <p class="text">N/A</p>
-          </div>
-
-          <div class="">
-            <p class="title">Asiento</p>
-            <p class="text">A confirmar</p>
-          </div>
+      <div class="flex">
+        <div class="">
+          <p class="title">Puerta</p>
+          <p class="text">-</p>
         </div>
 
-
-        <div class="flex">
-          <div class="nombre-wrapper">
-            <p class="title">Pasajeros</p>
-            <p class="text">Victor & Cristina</p>
-          </div>
-
-          <div class="iban-wrapper tooltip" onclick="copyIban()" onmouseout="outFunc()">
-            <span class="tooltiptext" id="myTooltip">Copiar</span>
-
-            <p class="title iban-title">IBAN
-              <span class="iban-icon">
-                <img src="./img/copy.svg" alt="">
-              </span>
-            </p>
-            <p class="text iban-text" id="iban">ES8600817115170001947796</p>
-          </div>
+        <div class="">
+          <p class="title">Embarque</p>
+          <p class="text">N/A</p>
         </div>
 
-        <!--
+        <div class="">
+          <p class="title">Asiento</p>
+          <p class="text">A confirmar</p>
+        </div>
+      </div>
+
+
+      <div class="flex">
+        <div class="nombre-wrapper">
+          <p class="title">Pasajeros</p>
+          <p class="text">Victor & Cristina</p>
+        </div>
+
+        <div class="iban-wrapper tooltip">
+          <span class="tooltiptext" id="myTooltip">Copiar</span>
+
+          <p class="title iban-title">IBAN
+            <span class="iban-icon">
+              <img src="./img/copy.svg" alt="">
+            </span>
+          </p>
+          <p class="text iban-text" id="iban">ES8600817115170001947796</p>
+        </div>
+      </div>
+
+      <!--
         <div class="flex">
           <div class="iban-wrapper">
             <p class="title iban-title">IBAN</p>
@@ -129,137 +119,283 @@
         </div>
         -->
 
-        <div class="more-address">
-          <a class="qr-wrapper" href="https://maps.app.goo.gl/PirYLXVLmWA5DoZc9">
-            <img src="./img/QR.png" alt="" id="qr">
-          </a>
+      <div class="more-address">
+        <a class="qr-wrapper" href="https://maps.app.goo.gl/PirYLXVLmWA5DoZc9">
+          <img src="./img/QR.png" alt="" id="qr">
+        </a>
 
-          <div>
-            <p class="title">Navacepedilla, Avila</p>
-            <p class="text">Ribera del Corneja</p>
-          </div>
-
-          <a class="boton-ir" href="https://maps.app.goo.gl/PirYLXVLmWA5DoZc9">
-            <img src="./img/location.svg" alt="">
-            <p>LLévame</p>
-          </a>
+        <div>
+          <p class="title">Navacepedilla, Avila</p>
+          <p class="text">Ribera del Corneja</p>
         </div>
 
-
-      </section>
-    </div>
-
-    <div class="slide" id="dos">
-      <div class="box more-info">
-
-        <div class="bloque">
-          <p>🛌 La invitación incluye:</p>
-
-          <ul>
-
-            <li>Cena viernes.</li>
-            <li>Desayuno, comida, cena, copas sábado.</li>
-            <li>Desayuno domingo.</li>
-            <li>Estancia viernes y sábado.</li>
-          </ul>
+        <a class="boton-ir" href="https://maps.app.goo.gl/PirYLXVLmWA5DoZc9">
+          <img src="./img/location.svg" alt="">
+          <p>LLévame</p>
+        </a>
       </div>
 
-        <div class="bloque">
-          <p>🧺 Cosas que te puedes llevar y dejar en tu casa rural/nevera:</p>
+
+    </section>
+  </div>
+
+  <div class="slide" id="dosA">
+    <div class="box more-info">
+
+      <div class="bloque">
+        <p>🛌 La invitación incluye:</p>
+
+        <ul>
+
+          <li>Cena viernes.</li>
+          <li>Desayuno, comida, cena, copas sábado.</li>
+          <li>Desayuno domingo.</li>
+          <li>Estancia viernes y sábado.</li>
+        </ul>
+      </div>
+
+      <div class="bloque">
+        <p> 🕰️ Horarios:</p>
+        <ul>
+          <li class="principal">
+
+            <span class="bold">
+              Viernes:
+            </span>
+            <ul>
+              <li>
+                Entrada a partir de las 16 h.
+              </li>
+
+              <li>
+                Cena de 21.00 a 23.00 h
+              </li>
+            </ul>
+          </li>
+
+          <li class="principal">
+            <span class="bold">
+              Sábado
+            </span>
+            <ul>
+              <li>
+                Desayuno de 9.00 a 11.00 h
+              </li>
+              <li>
+                Ceremonia 13.30 h
+              </li>
+              <li>
+                Cóctel 14.30 h
+              </li>
+              <li>
+                Recena 22.30 h
+              </li>
+              <li>
+                La finca permanece en silencio desde las 2.00 h
+              </li>
+            </ul>
+          </li class="principal">
+
+          <li>
+            <span class="bold">
+              Domingo
+            </span>
+            <ul>
+              <li>
+                Desayuno de 9 a 11 horas
+              </li>
+              <li>
+                Salida 13.00 horas
+              </li>
+            </ul>
+
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="bloque ">
+        <p class="warn">Si quieres contratar peluqueria o maquillaje pregunta a Cristina</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="slide" id="dosB">
+    <div class="box more-info">
+
+      <!-- <div class="bloque">
+        <p>🛌 La invitación incluye:</p>
+
+        <ul>
+
+          <li>Cena viernes.</li>
+          <li>Desayuno, comida, cena, copas sábado.</li>
+          <li>Desayuno domingo.</li>
+          <li>Estancia viernes y sábado.</li>
+        </ul>
+      </div>
+
+
+      <div class="bloque">
+        <p> 🕰️ Horarios:</p>
+        <ul>
+          <li class="principal">
+
+            <span class="bold">
+              Viernes:
+            </span>
+            <ul>
+              <li>
+                Entrada a partir de las 16 h.
+              </li>
+
+              <li>
+                Cena de 21.00 a 23.00 h
+              </li>
+            </ul>
+          </li>
+
+          <li class="principal">
+            <span class="bold">
+              Sábado
+            </span>
+            <ul>
+              <li>
+                Desayuno de 9.00 a 11.00 h
+              </li>
+              <li>
+                Ceremonia 13.30 h
+              </li>
+              <li>
+                Cóctel 14.30 h
+              </li>
+              <li>
+                Recena 22.30 h
+              </li>
+              <li>
+                La finca permanece en silencio desde las 2.00 h
+              </li>
+            </ul>
+          </li class="principal">
+
+          <li>
+            <span class="bold">
+              Domingo
+            </span>
+            <ul>
+              <li>
+                Desayuno de 9 a 11 horas
+              </li>
+              <li>
+                Salida 13.00 horas
+              </li>
+            </ul>
+
+          </li>
+
+        </ul>
+      </div> -->
+
+
+      <div class="bloque">
+        <p>🧺 Cosas que te puedes llevar y dejar en tu casa rural/nevera:</p>
         <ul>
           <li>Alcohol o refrescos para cuando se acabe la barra libre.</li>
           <li>Algo que quieras beber o comer entre horas.</li>
           <li>Hielo.</li>
         </ul>
-        </div>
-
-        <div class="bloque">
-          <p> 👗 Dress code:</p>
-          <ul>
-            <li>
-              <span class="bold">
-                Viernes y domingo:
-              </span>
-              como quieras, cómodo…
-            </li>
-            <li>
-              <span class="bold">
-                Sábado:
-              </span>
-              guapet@s, peinaos y con colonia. Sin tacón fino, mejor cuñas o tacón grueso que el césped hunde
-            </li>
-          </ul>
-        </div>
-
-        <div class="bloque ">
-          <p class="warn">Si quieres contratar peluqueria o maquillaje pregunta a Cristina</p>
-        </div>
-
-    
-
-        <!-- </footer> -->
-    
-
       </div>
+
+      <div class="bloque">
+        <p> 👗 Dress code:</p>
+        <ul>
+          <li>
+            <span class="bold">
+              Viernes y domingo:
+            </span>
+            Como quieras, cómodo…
+          </li>
+          <li>
+            <span class="bold">
+              Sábado:
+            </span>
+            Arreglados y guapetes. Sin tacón fino, mejor cuñas o tacón grueso que el césped hunde
+          </li>
+        </ul>
+      </div>
+
+
+
+      <!-- <div class="bloque ">
+        <p class="warn">Si quieres contratar peluqueria o maquillaje pregunta a Cristina</p>
+      </div> -->
+
+
+
+      <!-- </footer> -->
+
+
     </div>
+  </div>
 
-    <div class="slide asistencia" id="tres">
-      <div class="box">
-        <p class="">Por favor, confirma tu asistencia.</p>
-        <form action="">
-          <input type="text" name="Invitado" placeholder="Tu nombre">
-          <input type="text" name="Acompañante" placeholder="Acompañante">
+  <div class="slide" id="tres">
+    <div class="box asistencia">
+      <!-- <form action="email.php" method="POST"> -->
+      <form action="" method="POST">
+        <div class="form-group">
+          <h2 class="">Por favor, confirma tu asistencia.</h2>
+          <input type="text" id="invitado" name="invitado" placeholder="Tu nombre">
+          <input type="text" id="acompanante" name="acompanante" placeholder="Acompañante">
+        </div>
 
-            <label for="">¿Que noches te quedas?</label>
+        <div class="form-group">
+          <h2>¿Que noches te quedas?</h2>
 
-            <input type="checkbox" id="viernes" value="first_checkbox" value="Viernes"> Viernes
-            <input type="checkbox" id="sabado" value="second_checkbox" value="Sábado"> Sábado
+          <div class="both-checks">
+            <div class="check-wrapper">
+              <input type="checkbox" id="viernes" value="viernes" name="viernes">
+              <label for="viernes">Viernes</label>
+            </div>
 
+            <div class="check-wrapper">
+              <input type="checkbox" id="sabado" value="sabado" name="sabado">
+              <label for="sabado">Sábado</label>
+            </div>
+          </div>
 
+        </div>
 
-          <a class="boton-checkin" href="https://maps.app.goo.gl/PirYLXVLmWA5DoZc9">
+        <div class="form-group">
+          <button class="boton-checkin" type="submit">
             <img src="./img/plane.png" alt="">
             <p>Check in</p>
-          </a>
+          </button>
+        </div>
 
-        </form>
-      </div>
+      </form>
+
+      <p class="thanks"> Por favor, asegurate de que envias el correo desde la ventana que se ha abierto. <br> Gracias
+        por confirmar tu asitencia</p>
     </div>
-  <!-- </div> -->
+  </div>
+
+
+  <div class="clouds-wrapper">
+    <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_yc2d0lo5.json" background="transparent" speed="1"
+      loop autoplay></lottie-player>
+  </div>
+
+  <div class="avion-wrapper">
+    <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_bdclkupb.json" background="transparent" speed="1"
+      style="width: 200px; height: 200px;" loop autoplay></lottie-player>
+  </div>
+
+  <div class="avion-wrapper2">
+    <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_bdclkupb.json" background="transparent" speed="1"
+      style="width: 125px; height: 125px;" loop autoplay></lottie-player>
+  </div>
 
 </body>
 
 </html>
-
-<!--nav
-
-Info que queremos que aparezca:
-
-! Fecha: 15,16,17 de septiembre
-! Hora de entrada: el viernes 15 a partir de la 16 h
-
-
-! Lugar: Ribera del corneja
-! Dirección: Navacepedilla, Avila
-! Enlace: https://maps.app.goo.gl/PirYLXVLmWA5DoZc9
-
-! La invitación incluye:
-! Cena viernes
-! Desayuno, comida, cena, copas sábado
-! Desayuno domingo
-! Estancia viernes y sábado
-
-! Cosas que te puedes llevar y dejar en tu casa rural/nevera:
-! -Alcohol o refrescos para cuando se acabe la barra libre
-! -Algo que quieras beber o comer entre horas
-! -hielo
-
-! Dress code:
-! Viernes y domingo como quieras, cómodo…
-! Sábado: guapet@s, peinaos y con colonia. Sin tacón fino, mejor cuñas o tacón grueso que el césped hunde
-
-Si quieres contratar Peluqueria o maquillaje pregunta a Cristina
-
-! ES8600817115170001947796
-
--->
