@@ -111,7 +111,6 @@ $('#mailData').submit(function(e) {
 var boxes = document.querySelectorAll(".box");
 
 window.onscroll = function () {
-  // function elementInViewport() {
 
   boxes.forEach(box => {
     var bounding = box.getBoundingClientRect();

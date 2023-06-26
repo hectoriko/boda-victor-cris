@@ -2,8 +2,8 @@
 
 $invitado = $_POST['invitado'] ?? '';
 $acompanante = $_POST['acompanante'] ?? '';
-$viernes = isset($_POST['viernes']);
-$sabado = isset($_POST['sabado']);
+$viernes = isset($_POST['viernes']) && $_POST['viernes'] === true;
+$sabado = isset($_POST['sabado']) && $_POST['sabado'] === true;
 
 $viernesString = $viernes ? ", Viernes" : "";
 $sabadoString = $sabado ? ", Sábado" : "";
@@ -20,10 +20,4 @@ $mailheader = "From: $invitado <$recipient>\r\n";
 
 $mailSent = mail("Noacrisvic@gmail.com", $subject, $msg, $mailheader);
 
-// if ($mailSent) {
-//   // echo "¡Correo enviado!";
-//   // echo "¡Muchas gracias por confirmar!";
-// } else {
-//   // echo "¡Error al enviar el correo!";
-// }
 ?>
