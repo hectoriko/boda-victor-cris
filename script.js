@@ -79,6 +79,24 @@ function outFunc() {
 //   document.querySelector(".thanks").classList.add("show");
 // });
 
+function submitForm() {
+  //Do validation and submit form
+  $.ajax({
+    url: "mail.php",
+    type: "POST",
+  }).done(function (data) {
+    alert(data);
+    if (data == 1) {
+      // alert("Success");
+      // window.location.href = "test.php"; //Your location
+        document.querySelector(".thanks").classList.add("show");
+    } else {
+      alert("Ha habido un error. Intentalo de nuevo...");
+    }
+  });
+  return false;
+}
+
 // Highlight NAVIGATION
 var boxes = document.querySelectorAll(".box");
 
