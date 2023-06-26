@@ -1,42 +1,39 @@
 <?php
 
-// if ($_SERVER['REQUEST_METHOD'] === "POST") {
-//   // if it is a post request
-//  var_dump($_POST); exit();
+$invitado = $_POST['invitado'];
+$acompanante = $_POST['acompanante'];
+$acompananteString = "";
+$viernes = $_POST['viernes'];
+$sabado = $_POST['sabado'];
 
-//  $firstname = $_POST['invitado']; // change username with the name attribute of your input field
+$subject = "Invitado" . $invitado . "acompanante" . $acompanante . "viernes" . $viernes . "sabado" . $sabado;
 
-//  // then email the result to your email
+if (isset($viernes)) {
+  $viernes = ", Viernes";
+} else {
+  $viernes = "";
+}
 
-//  $email = 'hectoriko@gmail.com';   //change this too ;)
-//  $subject = 'I have no idea what to put as subject'; //:)
-//  $body = 'Someone has input ' . $firstname;
+if (isset($sabado)) {
+  $sabado = ", Sábado";
+} else {
+  $viernes = "";
+}
 
-// //  mail($email, $subject, $body);
+if (isset($sabado)) {
+  $acompananteString = " acompañado de " . $acompanante;
+} else {
+  $acompananteString = "";
+}
 
 
-//  ///////////////
-
-//  // the message
-//  $msg = "First line of text\nSecond line of text";
-
-//  // use wordwrap() if lines are longer than 70 characters
-//  $msg = wordwrap($msg,70);
-
-//  // send email
-//  mail($email, $subject, $msg);
-// }
-
-$name = $_POST['invitado'];
-// $acompanante = $_POST['acompanante'];
-$subject = 'I have no idea what to put as subject';
-$msg = "First line of text\nSecond line of text";
+$msg = "Hola, soy " . $invitado . " y asistiré " . $viernes . $sabado . $acompanante;
 
 $recipient = "Noacrisvic@gmail.com";
 
-$mailheader = "From:" . $name . "<" . $recipient . ">\r\n";
+$mailheader = "From:" . $invitado . "<" . $recipient . ">\r\n";
 
-mail($recipient, $subject, $msg, $mailheader) or die("Error!");
+mail("Noacrisvic@gmail.com", $subject, $msg, $mailheader) or die("Error!");
 
 echo "email sent!"
 
