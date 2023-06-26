@@ -85,12 +85,13 @@ function submitForm() {
     url: "mail.php",
     type: "POST",
     success: function(data) {
-      console.log("🚀 ~ success")
       document.querySelector(".thanks").classList.add("show");
     },
     error: function() {
-      console.log("🚀 ~ success")
-      alert('Ha habido un error! Intentalo de nuevo por favor.');
+      document.querySelector(".error").classList.add("show");
+      setTimeout(() => {
+        document.querySelector(".error").classList.remove("show");
+      }, 4000)
     }
   })
   // .done(function (data) {
