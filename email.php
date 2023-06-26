@@ -9,11 +9,11 @@ $viernesString = $viernes ? "Viernes" : "";
 $sabadoString = $sabado ? ", Sábado" : "";
 
 $acompananteStringA = $acompanante ? " Acompañante: $acompanante," : "";
-$acompananteString = $acompanante ? " acompañado de $acompanante" : "";
+$acompananteStringB = $acompanante ? " acompañado de $acompanante" : "";
 
-$subject = "Invitado: $invitado, $acompanante Días: $viernesString $sabadoString";
+$subject = "Invitado: $invitado, $acompananteStringA Días: $viernesString $sabadoString";
 
-$msg = "Hola, soy $invitado y asistiré $viernesString $sabadoString $acompananteString";
+$msg = "Hola, soy $invitado y asistiré $viernesString $sabadoString $acompananteStringB";
 
 $recipient = "no-reply@bodacrisvic.es";
 
