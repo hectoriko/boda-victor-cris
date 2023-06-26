@@ -5,12 +5,13 @@ $acompanante = $_POST['acompanante'] ?? '';
 $viernes = isset($_POST['viernes']) && $_POST['viernes'] === 'true';
 $sabado = isset($_POST['sabado']) && $_POST['sabado'] === 'true';
 
-$viernesString = $viernes ? ", Viernes" : "";
+$viernesString = $viernes ? "Viernes" : "";
 $sabadoString = $sabado ? ", Sábado" : "";
 
-$subject = "Invitado: $invitado, Acompañante: $acompanante, Días: $viernesString $sabadoString";
-
+$acompananteStringA = $acompanante ? " Acompañante: $acompanante," : "";
 $acompananteString = $acompanante ? " acompañado de $acompanante" : "";
+
+$subject = "Invitado: $invitado, $acompanante Días: $viernesString $sabadoString";
 
 $msg = "Hola, soy $invitado y asistiré $viernesString $sabadoString $acompananteString";
 
