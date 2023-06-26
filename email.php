@@ -6,7 +6,7 @@ $acompananteString = "";
 $viernes = $_POST['viernes'];
 $sabado = $_POST['sabado'];
 
-$subject = "Invitado" . $invitado . "acompanante" . $acompanante . "viernes" . $viernes . "sabado" . $sabado;
+$subject = "Invitado" . $invitado . "acompañante" . $acompanante . "viernes" . $viernes . "sabado" . $sabado;
 
 if (isset($viernes)) {
   $viernes = ", Viernes";
