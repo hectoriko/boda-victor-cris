@@ -49,13 +49,13 @@ function outFunc() {
 // Send mail
 // const checkin = document.querySelector(".boton-checkin");
 // checkin.addEventListener("click", e => {
-//   e.preventDefault();
-//   e.stopPropagation();
+  //   e.preventDefault();
+  //   e.stopPropagation();
 
-//   const invitado = document.querySelector("#invitado").value;
-//   const acompanante = document.querySelector("#acompanante").value;
-
-//   const viernes = document.querySelector("#viernes").checked;
+  //   const invitado = document.querySelector("#invitado").value;
+  //   const acompanante = document.querySelector("#acompanante").value;
+  
+  //   const viernes = document.querySelector("#viernes").checked;
 //   const sabado = document.querySelector("#sabado").checked;
 
 //   const target = "Noacrisvic@gmail.com";
@@ -79,8 +79,14 @@ function outFunc() {
 //   document.querySelector(".thanks").classList.add("show");
 // });
 
-function submitForm() {
-  //Do validation and submit form
+// const checkin = document.querySelector(".boton-checkin");
+// checkin.addEventListener("click", e => {
+
+
+$('#mailData').submit(function(e) {
+  e.preventDefault();
+  console.log('Funcion js');
+
   $.ajax({
     url: "mail.php",
     type: "POST",
@@ -94,18 +100,35 @@ function submitForm() {
       }, 4000)
     }
   })
-  // .done(function (data) {
-  //   alert(data);
-  //   if (data == 1) {
-  //     // alert("Success");
-  //     // window.location.href = "test.php"; //Your location
-  //       document.querySelector(".thanks").classList.add("show");
-  //   } else {
-  //     alert("Ha habido un error. Intentalo de nuevo...");
-  //   }
-  // });
-  return false;
-}
+})
+
+// function submitForm() {
+//   //Do validation and submit form
+//   $.ajax({
+//     url: "mail.php",
+//     type: "POST",
+//     success: function(data) {
+//       document.querySelector(".thanks").classList.add("show");
+//     },
+//     error: function() {
+//       document.querySelector(".error").classList.add("show");
+//       setTimeout(() => {
+//         document.querySelector(".error").classList.remove("show");
+//       }, 4000)
+//     }
+//   })
+//   // .done(function (data) {
+//   //   alert(data);
+//   //   if (data == 1) {
+//   //     // alert("Success");
+//   //     // window.location.href = "test.php"; //Your location
+//   //       document.querySelector(".thanks").classList.add("show");
+//   //   } else {
+//   //     alert("Ha habido un error. Intentalo de nuevo...");
+//   //   }
+//   // });
+//   return false;
+// }
 
 // Highlight NAVIGATION
 var boxes = document.querySelectorAll(".box");

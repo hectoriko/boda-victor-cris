@@ -23,9 +23,7 @@ $mailSent = mail("Noacrisvic@gmail.com", $subject, $msg, $mailheader);
 // if ($mailSent) {
 //   // echo "¡Correo enviado!";
 //   // echo "¡Muchas gracias por confirmar!";
-//   echo 1;
 // } else {
 //   // echo "¡Error al enviar el correo!";
-//   echo 0;
 // }
 ?>
