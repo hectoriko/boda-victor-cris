@@ -4,8 +4,6 @@ $invitado = $_POST['invitado'] ?? '';
 $acompanante = $_POST['acompanante'] ?? '';
 $viernes = isset($_POST['viernes']) && $_POST['viernes'] === 'true';
 $sabado = isset($_POST['sabado']) && $_POST['sabado'] === 'true';
-// $viernes = $_POST['viernes'] ?? '';
-// $sabado = $_POST['sabado'] ?? '';
 
 $viernesString = $viernes ? ", Viernes" : "";
 $sabadoString = $sabado ? ", Sábado" : "";

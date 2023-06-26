@@ -42,46 +42,10 @@ function outFunc() {
   tooltip.innerHTML = "Copiar";
 }
 
-// Send mail
-// const checkin = document.querySelector(".boton-checkin");
-// checkin.addEventListener("click", e => {
-  //   e.preventDefault();
-  //   e.stopPropagation();
-
-  //   const invitado = document.querySelector("#invitado").value;
-  //   const acompanante = document.querySelector("#acompanante").value;
-  
-  //   const viernes = document.querySelector("#viernes").checked;
-//   const sabado = document.querySelector("#sabado").checked;
-
-//   const target = "Noacrisvic@gmail.com";
-//   // const subject = 'Confirmación de asistencia';
-//   const subject = `Invitado: ${invitado} ${
-//     acompanante ? ` - Acompañante: ${acompanante}` : ""
-//   } --- Días:${viernes ? "V" : ""} ${sabado ? " S" : ""} `;
-
-//   let body = `Hola, soy ${invitado} y asistiré ${viernes ? "el viernes" : ""} ${
-//     sabado ? "el sábado" : ""
-//   } ${acompanante ? "acompañado de " + acompanante : ""}.`;
-
-//   body += `\n`;
-//   body += `Por favor, no cambies el asunto del correo.`;
-//   body += `Si quieres añadir algo, hazlo debajo.`;
-//   body += `\n`;
-//   body += `Gracias! 😀`;
-
-//   window.location.href = `mailto:${target}?subject=${subject}&body=${body}`;
-
-//   document.querySelector(".thanks").classList.add("show");
-// });
-
-// const checkin = document.querySelector(".boton-checkin");
-// checkin.addEventListener("click", e => {
 
 
 $('#mailData').submit(function(e) {
   e.preventDefault();
-  console.log('Funcion js');
 
   var data = {
     invitado : $("input[name='invitado']").val(),
@@ -89,6 +53,14 @@ $('#mailData').submit(function(e) {
     viernes : $("input[name='viernes']").is(":checked"),
     sabado : $("input[name='sabado']").is(":checked"),
   };
+
+  if (data.invitado == "" || data.viernes == false && data.sabado == false) {
+    document.querySelector("#error1").classList.add("show");
+    setTimeout(() => {
+      document.querySelector("#error1").classList.remove("show");
+    }, 4000)
+    return false;
+  } 
 
   $.ajax({
     url: "email.php",
@@ -98,9 +70,9 @@ $('#mailData').submit(function(e) {
       document.querySelector(".thanks").classList.add("show");
     },
     error: function() {
-      document.querySelector(".error").classList.add("show");
+      document.querySelector("#error2").classList.add("show");
       setTimeout(() => {
-        document.querySelector(".error").classList.remove("show");
+        document.querySelector("#error2").classList.remove("show");
       }, 4000)
     }
   })
