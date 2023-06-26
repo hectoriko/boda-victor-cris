@@ -1,7 +1,3 @@
-// Change URL name
-// const url = "www.victor-cristina.com";
-// window.history.replaceState({}, '', url);
-// window.history.pushState({}, '', url);
 
 // Copy IBAN
 const navButtons = document.querySelectorAll(".nav li a");
@@ -87,9 +83,17 @@ $('#mailData').submit(function(e) {
   e.preventDefault();
   console.log('Funcion js');
 
+  var data = {
+    invitado : $("input[name='invitado']").val(),
+    acompanante : $("input[name='acompanante']").val(),
+    viernes : $("input[name='viernes']").is(":checked"),
+    sabado : $("input[name='sabado']").is(":checked"),
+  };
+
   $.ajax({
     url: "email.php",
     type: "POST",
+    data: data,
     success: function(data) {
       document.querySelector(".thanks").classList.add("show");
     },
@@ -102,33 +106,6 @@ $('#mailData').submit(function(e) {
   })
 })
 
-// function submitForm() {
-//   //Do validation and submit form
-//   $.ajax({
-//     url: "mail.php",
-//     type: "POST",
-//     success: function(data) {
-//       document.querySelector(".thanks").classList.add("show");
-//     },
-//     error: function() {
-//       document.querySelector(".error").classList.add("show");
-//       setTimeout(() => {
-//         document.querySelector(".error").classList.remove("show");
-//       }, 4000)
-//     }
-//   })
-//   // .done(function (data) {
-//   //   alert(data);
-//   //   if (data == 1) {
-//   //     // alert("Success");
-//   //     // window.location.href = "test.php"; //Your location
-//   //       document.querySelector(".thanks").classList.add("show");
-//   //   } else {
-//   //     alert("Ha habido un error. Intentalo de nuevo...");
-//   //   }
-//   // });
-//   return false;
-// }
 
 // Highlight NAVIGATION
 var boxes = document.querySelectorAll(".box");
