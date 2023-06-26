@@ -88,7 +88,7 @@ $('#mailData').submit(function(e) {
   console.log('Funcion js');
 
   $.ajax({
-    url: "mail.php",
+    url: "email.php",
     type: "POST",
     success: function(data) {
       document.querySelector(".thanks").classList.add("show");
