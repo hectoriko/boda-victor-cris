@@ -84,16 +84,25 @@ function submitForm() {
   $.ajax({
     url: "mail.php",
     type: "POST",
-  }).done(function (data) {
-    alert(data);
-    if (data == 1) {
-      // alert("Success");
-      // window.location.href = "test.php"; //Your location
-        document.querySelector(".thanks").classList.add("show");
-    } else {
-      alert("Ha habido un error. Intentalo de nuevo...");
+    success: function(data) {
+      console.log("🚀 ~ success")
+      document.querySelector(".thanks").classList.add("show");
+    },
+    error: function() {
+      console.log("🚀 ~ success")
+      alert('Ha habido un error! Intentalo de nuevo por favor.');
     }
-  });
+  })
+  // .done(function (data) {
+  //   alert(data);
+  //   if (data == 1) {
+  //     // alert("Success");
+  //     // window.location.href = "test.php"; //Your location
+  //       document.querySelector(".thanks").classList.add("show");
+  //   } else {
+  //     alert("Ha habido un error. Intentalo de nuevo...");
+  //   }
+  // });
   return false;
 }
 
